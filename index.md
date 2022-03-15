@@ -34,8 +34,8 @@ We apply the model to the segmented images which predicts a probability vector f
 ## Dataset
 The dataset consists of around 21000 images for 18 different gesture classes with each gesture containing around 900 training images and 300 testing images. The images in the dataset are 50 x 50 pixels.
 
-The link for the dataset is as follows:
-https://www.kaggle.com/aryarishabh/hand-gesture-recognition-dataset
+The link for the dataset can be found at [Kaggle](https://www.kaggle.com/aryarishabh/hand-gesture-recognition-dataset)
+
 
 <img src="images/labels.png" width="720" >
 
@@ -44,7 +44,7 @@ https://www.kaggle.com/aryarishabh/hand-gesture-recognition-dataset
 
 The problem we faced was that the datasets we we used were incredibly undersized and in order to use them with sophisticated large models like Inception v3, Densenet,etc the images had to be resized nearly 5 times which although proved good to go while training the implementation on the webcam was challenging. The accuracy obtained could have been better. 
 
-Due to the limited availability of GPU computation resources we had to run the dataset containing 21000 thousand images(although the image was undersized) and  on Google colab and kaggle notebooks and fine tuning the pre-trained models was very challenging.We spent a significant amount of time with the local CUDA crashing while training with the datasets. 
+Due to the limited availability of GPU computation resources we had to run the dataset containing 21000 thousand images(although the image was undersized) and  on Google colab and kaggle notebooks and fine tuning the pre-trained models was very challenging.We spent a significant amount of time with the local CUDA crashing while training with the datasets. Due to this Inception,Densenet and Squeezenet models could only be run with a batch size of 64.
 
 It was really disappointing to realize that the amount of time spent on training the networks did not yield the desired results at runtime.
 
